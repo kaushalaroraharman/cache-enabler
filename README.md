@@ -1,2 +1,2 @@
 # cache-enabler
-Enabler for caching functionality
+Enabler for caching functionality.
