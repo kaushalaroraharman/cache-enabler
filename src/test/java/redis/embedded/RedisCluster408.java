@@ -1,24 +1,43 @@
 /*
- ********************************************************************************
- * COPYRIGHT (c) 2024 Harman International Industries, Inc                      *
- *                                                                              *
- * All rights reserved                                                          *
- *                                                                              *
- * This software embodies materials and concepts which are                      *
- * confidential to Harman International Industries, Inc. and is                 *
- * made available solely pursuant to the terms of a written license             *
- * agreement with Harman International Industries, Inc.                         *
- *                                                                              *
- * Designed and Developed by Harman International Industries, Inc.              *
- *------------------------------------------------------------------------------*
- * MODULE OR UNIT: ignite-cache                                                 *
- ********************************************************************************
+ * *******************************************************************************
+ *
+ *  Copyright (c) 2023-24 Harman International
+ *
+ *
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *
+ *  you may not use this file except in compliance with the License.
+ *
+ *  You may obtain a copy of the License at
+ *
+ *
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *       
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *
+ *  See the License for the specific language governing permissions and
+ *
+ *  limitations under the License.
+ *
+ *
+ *
+ *  SPDX-License-Identifier: Apache-2.0
+ *
+ *  *******************************************************************************
  */
 
 package redis.embedded;
 
-import com.harman.ignite.utils.logger.IgniteLogger;
-import com.harman.ignite.utils.logger.IgniteLoggerFactory;
+import org.eclipse.ecsp.utils.logger.IgniteLogger;
+import org.eclipse.ecsp.utils.logger.IgniteLoggerFactory;
 
 import java.io.IOException;
 import java.util.List;

@@ -6,7 +6,7 @@ This content is produced and maintained by the Eclipse Connected Services Platfo
 
 ## Trademarks
 
-HARMAN-Automotive/redis-cache is a trademark of the Eclipse Foundation.
+eclipse-ecsp/redis-cache is a trademark of the Eclipse Foundation.
 
 ## Copyright
 

@@ -109,7 +109,6 @@
         <redisson.version>3.31.0</redisson.version>
         <jacoco.ut.execution.data.file>${project.build.directory}/coverage-reports/jacoco-ut.exec
         </jacoco.ut.execution.data.file>
-        <redis.jar.version>2.6.0.5</redis.jar.version>
         <commons.io.version>2.11.0</commons.io.version>
     </properties>
 
@@ -268,12 +267,6 @@
                     <artifactId>guava</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.harman.ignite.platform</groupId>
-            <artifactId>redis-jar</artifactId>
-            <version>${redis.jar.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
