@@ -1,0 +1,5 @@
+==== 1.0.0 ================================================================
+
+Open source release for Cache Enabler library.
+
+#End of Release Notes#
