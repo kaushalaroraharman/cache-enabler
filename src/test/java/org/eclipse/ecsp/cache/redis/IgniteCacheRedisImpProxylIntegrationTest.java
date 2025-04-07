@@ -52,7 +52,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static org.eclipse.ecsp.cache.redis.RedisConstants.TEN_THOUSAND;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.testcontainers.shaded.org.awaitility.Awaitility.await;
 
 /**
@@ -104,11 +103,16 @@ public class IgniteCacheRedisImpProxylIntegrationTest {
      */
     @Test()
     public void testPutGetStringWithException() {
+        boolean exceptionOccurred = false;
         Assert.assertNotNull(igniteCache);
         redis.after();
         PutStringRequest putStringRequest = new PutStringRequest().withKey("hello").withValue("world");
-        assertThrows(WriteRedisConnectionException.class,
-                () -> igniteCache.putString(putStringRequest));
+        try {
+            igniteCache.putString(putStringRequest);
+        } catch (WriteRedisConnectionException e) {
+            exceptionOccurred = true;
+        }
+        Assert.assertTrue(exceptionOccurred);
         Assert.assertFalse(igniteCache.isHealthy(true));
     }
 
