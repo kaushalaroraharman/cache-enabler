@@ -211,7 +211,7 @@ public class IgniteCacheRedisImpl implements IgniteCache, HealthMonitor {
     private boolean needsRestartOnFailure;
 
     /** The redis key namespace. */
-    @Value(value = "#{\"${redis.key.namespace:}\".trim()}")
+    @Value("#{'\${redis.key.namespace:}'.trim()}")
     private String redisKeyNamespace;
 
     /** The healthy. */

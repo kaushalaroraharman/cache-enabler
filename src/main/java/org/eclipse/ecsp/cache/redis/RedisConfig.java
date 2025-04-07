@@ -258,55 +258,6 @@ public class RedisConfig {
     }
 
     /**
-     * Sets the redis config.
-     *
-     * @param props the props
-     */
-    private void setRedisConfig(Map<String, String> props) {
-
-        address = props.get(RedisProperty.REDIS_ADDRESS);
-        sentinels = props.get(RedisProperty.REDIS_SENTINELS);
-        masterName = props.get(RedisProperty.REDIS_MASTER_NAME);
-        readMode = props.get(RedisProperty.REDIS_READ_MODE);
-        subscriptionMode = props.get(RedisProperty.REDIS_SUBSCRIPTION_MODE);
-        subscriptionConnectionMinimumIdleSize =
-                Integer.parseInt(props.get(RedisProperty.REDIS_SUBSCRIPTION_CONN_MIN_IDLE_SIZE));
-        subscriptionConnectionPoolSize = Integer.parseInt(props.get(RedisProperty.REDIS_SUBSCRIPTION_CONN_POOL_SIZE));
-        slaveConnectionMinimumIdleSize = Integer.parseInt(props.get(RedisProperty.REDIS_SLAVE_CONN_MIN_IDLE_SIZE));
-        slaveConnectionPoolSize = Integer.parseInt(props.get(RedisProperty.REDIS_SLAVE_POOL_SIZE));
-        masterConnectionMinimumIdleSize = Integer.parseInt(props.get(RedisProperty.REDIS_MASTER_CONN_MIN_IDLE_SIZE));
-        masterConnectionPoolSize = Integer.parseInt(props.get(RedisProperty.REDIS_MASTER_CONN_POOL_SIZE));
-        idleConnectionTimeout = Integer.parseInt(props.get(RedisProperty.REDIS_IDLE_CONN_TIMEOUT));
-        connectTimeout = Integer.parseInt(props.get(RedisProperty.REDIS_CONN_TIMEOUT));
-        timeout = Integer.parseInt(props.get(RedisProperty.REDIS_TIMEOUT));
-        retryAttempts = Integer.parseInt(props.get(RedisProperty.REDIS_RETRY_ATTEMPTS));
-        retryInterval = Integer.parseInt(props.get(RedisProperty.REDIS_RETRY_INTERVAL));
-        reconnectionTimeout = Integer.parseInt(props.get(RedisProperty.REDIS_RECONNECTION_TIMEOUT));
-        failedAttempts = Integer.parseInt(props.get(RedisProperty.REDIS_FAILED_ATTEMPTS));
-        database = Integer.parseInt(props.get(RedisProperty.REDIS_DATABASE));
-        password = props.get(RedisProperty.REDIS_PASSWORD);
-        subscriptionsPerConnection = Integer.parseInt(props.get(RedisProperty.REDIS_SUBSCRIPTION_PER_CONN));
-        clientName = props.get(RedisProperty.REDIS_CLIENT_NAME);
-        connectionMinimumIdleSize = Integer.parseInt(props.get(RedisProperty.REDIS_CONN_MIN_IDLE_SIZE));
-        connectionPoolSize = Integer.parseInt(props.get(RedisProperty.REDIS_CONN_POOL_SIZE));
-        clusterMasters = props.get(RedisProperty.REDIS_CLUSTER_MASTERS);
-        scanInterval = Integer.parseInt(props.get(RedisProperty.REDIS_SCAN_INTERVAL));
-        nettyThreads = Integer.parseInt(props.get(RedisProperty.REDIS_NETTY_THREADS));
-        decodeInExecutor = Boolean.parseBoolean(props.get(RedisProperty.REDIS_DECODE_IN_EXECUTOR));
-        threads = Integer.parseInt(props.get(RedisProperty.REDIS_EXECUTOR_THREADS));
-        keepAlive = Boolean.parseBoolean(props.get(RedisProperty.REDIS_KEEP_ALIVE));
-        pingConnectionInterval = Integer.parseInt(props.get(RedisProperty.REDIS_PING_CONNECTION_INTERVAL));
-        tcpNoDelay = Boolean.parseBoolean(props.get(RedisProperty.REDIS_TCP_NO_DELAY));
-        checkSlotsCoverage = Boolean.parseBoolean(props.get(RedisProperty.REDIS_CHECK_SLOTS_COVERAGE));
-        String tsMode = props.get(RedisProperty.REDIS_TRANSPORT_MODE);
-        if (StringUtils.isEmpty(tsMode)) {
-            throw new IllegalArgumentException("redis.transport.mode cannot be null or empty");
-        } else {
-            transportMode = TransportMode.valueOf(tsMode);
-        }
-    }
-
-    /**
      * Gets the config.
      *
      * @return the config
